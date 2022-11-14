@@ -1,45 +1,24 @@
-# What is this ?
-This is a portfolio template that you can use to showcase your work, especially if it's comprised of projects that should be shown in a very visual way.
-
-Looking for a game developer job, I needed a portfolio to present my work to recruiters. I found a lot of custom made portfolios, but no easy to use template unless I used Wordpress. Which was overkill to me because a static HTML/JS website would do fine.
-
-So i created my own using VueJS, keeping in mind that I wanted it to be easily customisable so other people can use this as a base to make their own. It's very simple, static, fast and responsive.
-
-For a real world use case, check my portfolio: https://scheefer.me
+<a href="https://imgur.com/ZY9n6hP"><img src="https://i.imgur.com/ZY9n6hP.png" title="source: imgur.com" /></a>
 
 
-# How to use
+## 🌐Socials
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/angel-gimer-3b8098231) 
 
-1. Install
+# 💻Tech Stack
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+# 📊GitHub Stats :
+![](https://github-readme-stats.vercel.app/api?username=Angel-2180&theme=nightowl&hide_border=true&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Angel-2180&theme=nightowl&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angel-2180&theme=nightowl&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
 
-    - Fork or duplicate the repository
-    - npm install
-    - npm run serve
+## 🏆GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Angel-2180&theme=onedark&no-frame=false&no-bg=false&margin-w=4)
 
-2. Customize
-* For the content
-    - Except for the projects pages, everything is static HTML that you can edit directly in the views and components files
-    - For the projects pages, the page is dynamically populated at runtime using data stored in Typescript files (data/GameProjectsData.ts and data/OtherProjectsData.ts). Make the changes directly in these .ts files
-    - Static files (images, icons, downloadables,..) should be placed in /public folder.
-    - Make the necessary changes in the .env file (this is mostly the site metadata). You need to "npm run serve" again when updating this file.
+### ✍️Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
-* For the style
-    - The basic colors can be edited in the css/variables.less file.
-    - The rest of the CSS can be edited, if need be, directly inside each view and component.
-    - If you place custom CSS in your projects HTML data (that will be displayed in an overlay dialog), you must add the definition for this CSS in the css/projects.less file
+### 😂Random Dev Meme
+<img src="https://random-memer.herokuapp.com/" width="512px"/>
 
-* Additional info & optimizations
-    - Images will be loaded on-demand when you switch tabs. It means if you have big images or animated gifs, you may want to preload them so the user sees them faster when they change tabs. To do this, you can call Helpers.preloadImages in app.vue to preload heavy images.
-
-3. Deploy
-
-    - npm run build
-    - copy the content of the "dist" folder (created by "npm run build") to the publish location.
-    - Check this example if you want to deploy to GitHub pages or some other major static content host: https://cli.vuejs.org/guide/deployment.html#github-pages
-
-
-# License
-
-This is GNU LGPL, check the LICENSE file.
-
-Please consider keeping the link to this repository at the bottom of your portfolio, so other people can find and use this template too. Of course it's not mandatory though.
+---
+[![](https://visitcount.itsvg.in/api?id=Angel-2180&icon=8&color=1)](https://visitcount.itsvg.in)
