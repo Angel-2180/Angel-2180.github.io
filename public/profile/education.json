@@ -1,0 +1,16 @@
+{
+    "education":[
+        {
+            "title": "Sep 2021 - Aug 2023",
+            "cardTitle": "Game Programmer",
+            "cardSubtitle":"ISART Digital, Montreal"
+           
+        },
+        {
+            "title": "2018-2021",
+            "cardTitle": "High School",
+            "cardSubtitle":"Sainte Marie Du Port, Les Sables D'Olones"
+            
+        }
+    ]
+}

@@ -1,18 +1,25 @@
 module.exports = {
-  root: true,
   env: {
-    node: true
+    browser: true,
+    es2021: true,
   },
-  'extends': [
-    'plugin:vue/essential',
-    'eslint:recommended',
-    '@vue/typescript/recommended'
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
   ],
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
+  plugins: [
+    'react',
+  ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
-  }
-}
+    'prefer-template': 0,
+    'react/no-children-prop': [0],
+    'linebreak-style': 0
+  },
+};

@@ -1,0 +1,16 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/angel-gimer-3b8098231/"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/Angel-2180"
+        },
+        {
+            "network" : "email",
+            "href": "mailto:angel.gimer.ca@gmail.com"
+        }
+    ]
+}
