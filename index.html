@@ -22,7 +22,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/0a8efae144.js" crossorigin="anonymous"></script>
     </head>
-    <body id="page-top">
+    <body id="page-top" >
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -37,36 +37,55 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead", id="home">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Hi, I'm Angel Gimer and I'm a Game Programmer</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        
-                        <a class="btn btn-primary btn-xl" href="#about">About me</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">A Programmer but also a Student</h2>
-                        <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Hi, My name is Angel Gimer and I am currently a Game Programming student at ISART DIGITAL Montreal, I love Manga And Japanese animation as well as video games, I also Enjoy to read good book quite often.</p>
-                  
-  
-                    </div>
-                </div>
-            </div>
+
+        <section id="home">
+            <!-- About-->
+
+            <img src="assets/stars.png" id="stars">
+            <img src="assets/moon.png" id="moon">
+            <img src="assets/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Angel Gimer, Game Programmer</h2>
+            <a href="#sec" id="btn">About Me</a>
+            <img src="assets/mountains_front.png" id="mountains_front">
         </section>
-        
+        <!-- About-->
+        <div id = "about">
+            
+            <div class="sec" id="sec">
+                <h2>About me</h2>
+                <p>Hi, I'm Angel Gimer, a Game Programmer from France. I'm currently studying Game Programming at ISART DIGITAL. I'm passionate about programming and I'm always looking for new challenges. I'm currently looking for a job as a Game Programmer.</p>
+                <!-- social media icons -->
+                <div class="social-icons mt-4">
+
+                    <a class="btn btn-light" href="https://drive.google.com/file/d/1VSLtGA8aPz-s4ikL0ErOFe6tox-0IwhC/view?usp=share_link">Get my resume here</a>
+                    <a href="https://github.com/Angel-2180" class="fa fa-github"></a>
+                    <a href="https://www.linkedin.com/in/angel-gimer-3b8098231/" class="fa fa-linkedin" ></a>
+                    <a href="mailto:angel.gimer.ca@gmail.com?subject=Portfolio Contact" class="fa fa-envelope" ></a>
+                </div>
+            </div>
+        </div>
+            <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+
+            })
+        </script>
+
         <!-- Portfolio-->
         <div id="portfolio">
             <div class="container-fluid p-0">
@@ -147,29 +166,7 @@
                     </div> -->
                 </div>
             </div>
-        </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Get my resume here</h2>
-                <a class="btn btn-light btn-xl" href="https://drive.google.com/file/d/1VSLtGA8aPz-s4ikL0ErOFe6tox-0IwhC/view?usp=share_link">Follow Me!</a>
-                <!-- Footer-->
-                <footer class="bg-dark text-center">
-                    <div class="container-fluid">
-        
-                        <!-- social media icons -->
-                        <div class="social-icons mt-4">
-                            
-                            <a href="https://github.com/Angel-2180" class="fa fa-github"></a>
-                            <a href="https://www.linkedin.com/in/angel-gimer-3b8098231/" class="fa fa-linkedin"></a>
-                            <a href="mailto:angel.gimer.ca@gmail.com?subject=Portfolio Contact" class="fa fa-envelope"></a>
-                        </div>
-                        
-                    </div>
-                </footer>
-            </div>
-        </section>
-       
+        </div>       
      
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
