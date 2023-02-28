@@ -148,6 +148,7 @@ section img{
 section img#moon{
 
 mix-blend-mode : screen;
+opacity: 0.1;
 }
 
 section img#mountains_front{
