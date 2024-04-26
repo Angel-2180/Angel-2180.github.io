@@ -91,7 +91,7 @@ function LoadContent(content, animate, toRight, hash)
         location.hash = '#' + content;
         GlobalHashCustomSet = false;
 
-        document.title = 'Joey de Vries - ' + content.charAt(0).toUpperCase() + content.slice(1);
+        document.title = 'Angel Gimer - ' + content.charAt(0).toUpperCase() + content.slice(1);
     }
      
     // retrieve content    

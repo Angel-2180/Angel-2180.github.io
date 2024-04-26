@@ -54,13 +54,13 @@ table {
     #C09B55; yellowish complement 
 */
 
-/* JOEYDEVRIES.COM CSS */
+
 body {
-    background-color: #f0f0f0;
+    background-color: #262626;
 	/*font-family: Gudea, 'PT Sans',  Calibri; */
 	font-family: Gudea, sans-serif; 
 	font-size: 16px;
-	color: #111;
+	color: #f8f8f8;
     overflow-y: scroll;
 }
 
