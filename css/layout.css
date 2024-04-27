@@ -307,6 +307,7 @@ div.section_divider img {
     padding: 0px;
     border: 0px;
     border-radius: 0px;
+    object-fit: cover;
 }
 
 .mfp-img-mobile img {
