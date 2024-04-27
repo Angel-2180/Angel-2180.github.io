@@ -347,14 +347,14 @@ div.portfolio_item:nth-of-type(even) img {
     float: left;
     width: 45px;
     height: 30px;
-    background-image: url('img/back_arrow.png');
+    background-image: url('../assets/img/back_arrow.png');
 
     cursor: pointer;
     margin-right: 10px;
 }
 
 .portfolio_back:hover {
-    background-image: url('img/back_arrow_hover.png');
+    background-image: url('../assets/img/back_arrow_hover.png');
 }
 
 
