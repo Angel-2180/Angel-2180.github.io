@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+  
+  <body class="">  
+    <div id="page">  
+        <div id="content" class="">
+            <div class="form-style" id="contact_form">
+                <div class="form-style-heading">Feel free send me a message relating anything that might peek your interest. I'll try my best to respond within a single day.</div>
+                <div id="contact_results"></div>
+                
+                <div id="contact_body">
+                    
+                    <label>
+                        <span>NAME <span class="required"></span></span>
+                        <input type="text" name="name" id="name" required="true" class="input-field">
+                    </label>
+                    
+                    <label>
+                        <span>EMAIL <span class="required"></span></span>
+                        <input type="email" name="email" required="true" class="input-field">
+                    </label>
+                    
+                    <label for="field5">
+                        <span>MESSAGE <span class="required"></span></span>
+                        <textarea name="message" id="message" class="textarea-field" required="true"></textarea>
+                    </label>
+
+                    <p class="antispam">Leave this empty: <input type="text" name="url"></p>
+                    
+                    <label>
+                        <img src="https://joeydevries.com/img/ajax-loader.gif" class="ajax-loader">
+                        <span>&nbsp;</span><input type="submit" id="submit_btn" value="SEND">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script type="text/javascript">
+        // C: simple Ajax contact form from Sanwebe
+        // http://www.sanwebe.com/2011/12/making-simple-jquery-ajax-contact-form
+        // register click event on ajax container as document.ready doesn't work within
+        // ajax-loaded content.
+        $( "#content" ).on("click", "#submit_btn", function() {
+            
+            var proceed = true;
+            // simple validation at client's end
+            // loop through each field and we simply change border color to red for invalid fields       
+            $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+                $(this).css('border-color',''); 
+                if(!$.trim($(this).val())){ // if this field is empty 
+                    $(this).css('border-color','red'); // change border color to red   
+                    proceed = false; // set do not proceed flag
+                }
+                // check invalid email
+                var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+                if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+                    $(this).css('border-color','red'); // change border color to red   
+                    proceed = false; // set do not proceed flag              
+                }   
+            });
+           
+            if(proceed) // everything looks good! proceed...
+            {
+                $('.ajax-loader').css('display', 'inline');
+                $('.ajax-loader').animate({ opacity: 1.0 }, 500);
+            
+                // get input field values data to be sent to server
+                post_data = {
+                    'user_name'     : $('input[name=name]').val(), 
+                    'user_email'    : $('input[name=email]').val(), 
+                    'url'           : $('input[name=url]').val(), 
+                    'msg'           : $('textarea[name=message]').val()
+                };
+                // ajax post data to server
+                $.post('contact_mail.php', post_data).done(function(data){  
+                    if(data.indexOf('error') > -1) { // load json data from server and output message     
+                        output = '<div class="error">'+data+'</div>';
+                    }else{
+                        output = '<div class="success">'+data+'</div>';
+                        // reset values in all input fields
+                        $("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+                        // $("#contact_form #contact_body").slideUp(); // hide form after success
+                    }
+                    $('.ajax-loader').animate({ opacity: 0.0 }, 500, function() {            
+                        $('.ajax-loader').css('display', 'none');
+                    });
+                    $("#contact_form #contact_results").hide().html(output).slideDown();
+                }, 'json');
+            }
+            
+            // reset previously set border colors and hide all message on .keyup()
+            $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
+                $(this).css('border-color',''); 
+                $("#result").slideUp();
+            });
+        });
+        </script>
+        <style>
+            /* form style */
+            .form-style{
+                padding: 10px;
+                padding-left: 10px;
+            }
+            .form-style-heading{
+                width: 700px;
+                border-bottom: 2px solid #ddd;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+            }
+            .form-style label{
+                display: block;
+                margin: 0px 0px 15px 0px;
+            }
+            .form-style label > span{
+                width: 100px;
+            
+                float: left;
+                padding-top: 8px;
+                padding-right: 5px;
+                font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+            }
+            .form-style span.required{
+                color:red;
+            }
+            .form-style  .long{
+                width: 120px;
+            }
+            .form-style input.input-field{
+                width: 40%;   
+            }
+            
+            .form-style input.input-field,
+            .form-style .tel-number-field,
+            .form-style .textarea-field,
+             .form-style .select-field{
+                -webkit-transition: all 0.30s ease-in-out;
+                -moz-transition: all 0.30s ease-in-out;
+                -ms-transition: all 0.30s ease-in-out;
+                -o-transition: all 0.30s ease-in-out; 
+                /* box-sizing: border-box; */
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border: 1px solid #6e6e6e;
+                /* box-shadow: 1px 1px 4px #EBEBEB;
+                -moz-box-shadow: 1px 1px 4px #EBEBEB; */
+                -webkit-box-shadow: none;
+                /* border-radius: 3px; */
+                -webkit-border-radius: 3px;
+                /* -moz-border-radius: 3px; */
+                padding: 7px;
+                outline: none;
+                background-color: #3b3b3b;
+                color: #eee;
+            }
+            .form-style .input-field:focus,
+            .form-style .tel-number-field:focus,
+            .form-style .textarea-field:focus,  
+            .form-style .select-field:focus{
+                border: 1px solid #888;
+            }
+            .form-style .textarea-field{
+                height:150px;
+                width: 75%;
+                resize: none;
+                background-color: #3b3b3b;
+                
+            }
+            .form-style input[type="button"],
+            .form-style input[type="submit"] {
+                background-color: #666;
+                border: 1px solid #444;
+                display: inline-block;
+                cursor: pointer;
+                color: #eee;
+                padding: 8px 18px;
+                float: right;
+                margin-right: 100px;
+                text-decoration: none;
+                font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+            }
+            .form-style input[type="button"]:hover,
+            .form-style input[type="submit"]:hover {
+                background-color: #555;
+            }
+            .form-style input[type="submit"]:focus {
+                outline: 0;
+            }
+            .form-style .success{
+                background: #c3edc3;
+                padding: 5px 10px 5px 10px;
+                margin: 0px 0px 10px 0px;
+                border: none;
+                color: #336d33;
+                border-left: 5px solid #93cd93;
+            }
+            .form-style .error {
+                background: #edc3c3;
+                padding: 5px 10px 5px 10px;
+                margin: 0px 0px 10px 0px;
+                border: none;
+                color: #6d3333;
+                border-left: 3px solid #cd9393;
+            }
+            
+            .ajax-loader {
+                display: inline;
+                border: 0px;
+                display: none;
+                opacity: 0.0;
+            }
+            </style>
+  </body>
+</html>
