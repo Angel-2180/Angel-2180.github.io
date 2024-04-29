@@ -52,15 +52,25 @@ table {
     #357671; greenish
     #514484; dark-purple
     #C09B55; yellowish complement 
-*/
+    /* CVS */
+
+/* a1a3b4,b1a9b9,bca3af,d5b7b6,e6d4cb
+
+    /* CVS with # */    
+    /* #a1a3b4,#b1a9b9,#bca3af,#d5b7b6,#e6d4cb */
+    /* Array */
+    /* ["a1a3b4", "b1a9b9", "bca3af", "d5b7b6", "e6d4cb"] */
+    /* Array with # */
+    /* ["#a1a3b4", "#b1a9b9", "#bca3af", "#d5b7b6", "#e6d4cb"] */
+    /* CSV */
 
 
 body {
-    background-color: #262626;
+    background-color: #f8f8f8;
 	/*font-family: Gudea, 'PT Sans',  Calibri; */
 	font-family: Gudea, sans-serif; 
 	font-size: 16px;
-	color: #f8f8f8;
+	color: #000;
     overflow-y: scroll;
 }
 
