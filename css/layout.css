@@ -66,11 +66,11 @@ table {
 
 
 body {
-    background-color: #f8f8f8;
+    background-color: #0d1117;
 	/*font-family: Gudea, 'PT Sans',  Calibri; */
 	font-family: Gudea, sans-serif; 
 	font-size: 16px;
-	color: #000;
+	color: #e6edf3;
     overflow-y: scroll;
 }
 
@@ -89,12 +89,13 @@ body {
     padding-bottom: 4px;
     border-bottom: 1px solid #a0a0a0;
     margin-bottom: 7px;
+    /* background-color: #24292f; */
 }
 
 #title {
     font-size: 16pt;
     font-weight: bold;
-    color: #405580;
+    color: #d42a5b;
 }
 #subtitle {
     
@@ -139,6 +140,12 @@ body {
     
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#gif {
+    /* padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px; */
 }
 
 
@@ -247,13 +254,13 @@ body {
 }
 
 h1 {
-    color: #405680;
+    color: #d42a5b;
     font-size: 16pt;
     margin-bottom: 7px;
 }
 
 h2 { 
-    color: #357671;
+    color: #e63f66;
     font-size: 15pt;
     margin-bottom: 5px;
 }
@@ -269,7 +276,7 @@ p {
 }
 
 a {
-    color: #405680;
+    color: #e63f66;
 }
 
 ul {
@@ -278,7 +285,7 @@ ul {
 }
 
 .code-font {
-    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-family: 'Josefin Sans', 'Nunito', 'Roboto Slab', 'Lucida Typewriter', monospace;
 }
 
 
