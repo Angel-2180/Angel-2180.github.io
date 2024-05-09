@@ -117,7 +117,7 @@ function LoadContent(content, animate, toRight, hash)
             $('#content').animate({
                opacity: 0,
                left: ContentPos.left - marginLeft + offset
-            }, { duration: 300, queue: false, complete: function() {    
+            }, { duration: 250, queue: false, complete: function() {    
                 $.get('content/' + content_file, function(data) {
                     // once loaded, fade new content back in
                     var precontent = '';
