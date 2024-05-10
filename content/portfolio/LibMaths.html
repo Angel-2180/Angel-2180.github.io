@@ -36,6 +36,25 @@
       <a href="https://angel-2180.github.io/assets/img/FullSize/LibMathsMat4.png" title="Matrix" description="some constructor for Matrix"><img src="assets/img/Thumbs/LibMathsMat4_thumbs.png"></a>
       <a href="https://angel-2180.github.io/assets/img/FullSize/LibMathsVec4.png" title="Vector" description="some constructor for Vector"><img src="assets/img/Thumbs/LibMathsVec4_thumbs.png"></a>
 
-  </div>
-    </body>
+    </div>
+    <script type="text/javascript">
+      $('.popup-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+              enabled: true,
+              navigateByImgClick: true,
+              preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+          },
+          image: {
+              tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+              titleSrc: function(item) {
+                  return item.el.attr('title') + '<small>' + item.el.attr('description') + '</small>';
+              }
+          }
+      });
+      </script>  
+  </body>
 </html>
