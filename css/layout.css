@@ -45,26 +45,6 @@ table {
 	border-spacing: 0;
 }
 
-/*  COLOR PALLETTE: */
-/*
-    http://paletton.com/#uid=63J0u0khMo67LB+cEthmwjss6dS
-    #405680; dark-blue
-    #357671; greenish
-    #514484; dark-purple
-    #C09B55; yellowish complement 
-    /* CVS */
-
-/* a1a3b4,b1a9b9,bca3af,d5b7b6,e6d4cb
-
-    /* CVS with # */    
-    /* #a1a3b4,#b1a9b9,#bca3af,#d5b7b6,#e6d4cb */
-    /* Array */
-    /* ["a1a3b4", "b1a9b9", "bca3af", "d5b7b6", "e6d4cb"] */
-    /* Array with # */
-    /* ["#a1a3b4", "#b1a9b9", "#bca3af", "#d5b7b6", "#e6d4cb"] */
-    /* CSV */
-
-
 body {
     background-color: #0d1117;
 	/*font-family: Gudea, 'PT Sans',  Calibri; */
