@@ -335,7 +335,7 @@ div.section_divider img {
 /*       PORTFOLIO        */
 /**************************/
 div.portfolio_item {
-    height: 375px;
+    height: 350px;
     cursor: pointer; cursor: hand;
 }
 div.portfolio_item:hover {
